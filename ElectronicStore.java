@@ -1,17 +1,15 @@
 /*
- * ============================================================
- * Author         : Vijaya Masekar
- * Roll Number    : 2657
- * Subject        : Object Oriented Technology
- * Assignment     : Electronic Store Management System
- * ============================================================
- * 
- * DESCRIPTION:
- * This is a Menu-Driven Electronic Store Management System.
- * It allows the user to view different sections like Users,
- * Products, Store details, Services, and Activities through
- * a simple numbered menu.
- * ============================================================
+ Author         : Vijaya Masekar
+ Roll Number    : 2657
+ Subject        : Object Oriented Technology
+ Assignment     : Electronic Store Management System
+ 
+ DESCRIPTION:
+ This is a Menu-Driven Electronic Store Management System.
+ It allows the user to view different sections like Users,
+ Products, Store details, Services, and Activities through
+ a simple numbered menu.
+
  */
 
 // Scanner is used to take input from the keyboard

@@ -1,14 +1,14 @@
 /*
- * ============================================================
- * Author         : [Your Name]
- * Roll Number    : [Your Roll No]
- * Subject        : Object Oriented Technology
- * Topic          : Abstraction
- * Description    : Demonstrating Abstraction using Product as
- *                  abstract parent. You cannot create generic
- *                  Product objects - only specific ones like
- *                  Laptop or Mobile.
- * ============================================================
+
+  Author         : Vijaya Masekar
+  Roll Number    : 2657
+  Subject        : Object Oriented Technology
+  Topic          : Abstraction
+  Description    : Demonstrating Abstraction using Product as
+                   abstract parent. You cannot create generic
+                   Product objects - only specific ones like
+                   Laptop or Mobile.
+
  */
 
 // ABSTRACT CLASS - You CANNOT create objects of this class directly!

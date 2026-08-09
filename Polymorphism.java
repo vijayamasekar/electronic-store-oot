@@ -1,13 +1,13 @@
 /*
  * ============================================================
- * Author         : [Your Name]
- * Roll Number    : [Your Roll No]
- * Subject        : Object Oriented Technology
- * Topic          : Polymorphism
- * Description    : Demonstrating Polymorphism where the same
- *                  method name display() behaves differently
- *                  for different objects (User types).
- * ============================================================
+  Author         : Vijaya Masekar
+  Roll Number    : 2657
+  Subject        : Object Oriented Technology
+  Topic          : Polymorphism
+  Description    : Demonstrating Polymorphism where the same
+                    method name display() behaves differently
+                    for different objects (User types).
+
  */
 
 // PARENT CLASS

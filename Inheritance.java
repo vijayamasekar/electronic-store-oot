@@ -1,12 +1,11 @@
 /*
- * ============================================================
- * Author         : [Your Name]
- * Roll Number    : [Your Roll No]
- * Subject        : Object Oriented Technology
- * Topic          : Inheritance
- * Description    : Demonstrating Inheritance using User as parent
- *                  and Customer & Staff as child classes.
- * ============================================================
+  Author         : Vijaya Masekar
+  Roll Number    : 2657
+  Subject        : Object Oriented Technology
+  Topic          : Inheritance
+  Description    : Demonstrating Inheritance using User as parent
+                    and Customer & Staff as child classes.
+ 
  */
 
 // PARENT CLASS - This is the base class that holds common info

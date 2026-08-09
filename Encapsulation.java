@@ -1,13 +1,13 @@
 /*
- * ============================================================
- * Author         : [Your Name]
- * Roll Number    : [Your Roll No]
- * Subject        : Object Oriented Technology
- * Topic          : Encapsulation
- * Description    : Demonstrating Encapsulation by keeping fields
- *                  private and accessing them through public
- *                  getters and setters with validation.
- * ============================================================
+
+Author         : Vijaya Masekar
+Roll Number    : 2657
+Subject        : Object Oriented Technology
+Topic          : Encapsulation
+Description    : Demonstrating Encapsulation by keeping fields
+                 private and accessing them through public
+                 getters and setters with validation.
+
  */
 
 class Product{
