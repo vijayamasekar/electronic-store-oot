@@ -1,10 +1,9 @@
 /*
  * ============================================================
- * Author         : [Your Full Name]
- * Roll Number    : [Your Roll Number]
+ * Author         : Vijaya Masekar
+ * Roll Number    : 2657
  * Subject        : Object Oriented Technology
  * Assignment     : Electronic Store Management System
- * Date           : [Today's Date]
  * ============================================================
  * 
  * DESCRIPTION:
