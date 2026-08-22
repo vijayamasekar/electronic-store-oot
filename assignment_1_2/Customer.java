@@ -1,12 +1,12 @@
 // This is the Customer class - it stores details about customers who buy products
 public class Customer {
-    int cid;            // Unique Customer ID
-    int uid;            // User ID (links to User)
-    String name;        // Customer name
-    String phone;       // Phone number
-    String email;       // Email address
-    String address;     // Home address
-    double totalPurchase; // Total money spent by customer
+    int cid;            
+    int uid;            
+    String name;        
+    String phone;       
+    String email;       
+    String address;     
+    double totalPurchase; 
 
     // This function shows all customer details
     // No parameters, returns nothing

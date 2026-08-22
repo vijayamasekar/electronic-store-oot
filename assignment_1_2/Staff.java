@@ -1,13 +1,13 @@
 // This is the Staff class - stores info about employees working in the store
 public class Staff {
-    int uid;            // User ID
-    int sId;            // Unique Staff ID
-    String name;        // Staff name
-    String phone;       // Phone number
-    String email;       // Email address
-    String address;     // Home address
-    String joiningDate; // Date when staff joined
-    double salary;      // Monthly salary
+    int uid;            
+    int sId;            
+    String name;       
+    String phone;      
+    String email;      
+    String address;     
+    String joiningDate; 
+    double salary;     
 
     // This function displays all staff details
     // No parameters, returns nothing

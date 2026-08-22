@@ -1,13 +1,13 @@
 // This is the Investor class - stores info about people who invest money in the store
 public class Investor {
-    int iId;        // Unique Investor ID
-    int uid;        // User ID
-    String name;    // Investor name
-    String phone;   // Phone number
-    String email;   // Email address
-    String address; // Home address
-    String date;    // Date of investment
-    double amount;  // Amount invested
+    int iId;        
+    int uid;        
+    String name;    
+    String phone;   
+    String email;   
+    String address; 
+    String date;    
+    double amount;  
 
     // This function displays all investor details
     // No parameters, returns nothing

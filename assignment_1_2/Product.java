@@ -1,12 +1,12 @@
 // This is the Product class - stores general info about any product in the store
 public class Product {
-    int pId;            // Unique Product ID
-    String productName; // Name of the product
-    String brand;       // Brand name (like Dell, Samsung, LG)
-    double price;       // Price in Rupees
-    String category;    // Category (like Laptop, TV, Mobile)
-    int warranty;       // Warranty period in years
-    int stock;          // How many items are available
+    int pId;            
+    String productName; 
+    String brand;      
+    double price;     
+    String category;    
+    int warranty;       
+    int stock;          
 
     // This function displays all product details
     // No parameters, returns nothing

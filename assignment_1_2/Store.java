@@ -1,9 +1,9 @@
 // This is the Store class - stores info about the main electronic store
 public class Store {
-    int storeId;        // Unique Store ID
-    String storeName;   // Name of the store
-    String location;    // Location of the store
-    String contact;     // Contact number
+    int storeId;        
+    String storeName;   
+    String location;    
+    String contact;     
 
     // This function displays all store details
     // No parameters, returns nothing
