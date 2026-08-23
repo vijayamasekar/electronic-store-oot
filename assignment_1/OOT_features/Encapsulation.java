@@ -108,7 +108,7 @@ class Product {
 
 public class Encapsulation {
     public static void main(String[] args) {
-        System.out.println("========== ENCAPSULATION DEMO ==========\n");
+        System.out.println(" ENCAPSULATION \n");
 
         // Creating object and setting values through setters only
         Product p = new Product();
@@ -122,10 +122,7 @@ public class Encapsulation {
         // Display using getter logic inside display()
         p.display();
 
-        // Trying invalid value to show validation works
-        System.out.println("\n--- Trying invalid price ---");
-        p.setPrice(-1000);
 
-        System.out.println("\n========== DEMO END ==========");
+       
     }
 }

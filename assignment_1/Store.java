@@ -1,16 +1,15 @@
-// This is the Store class - stores info about the main electronic store
+// This class stores details of the main store.
 public class Store {
-    int storeId;        
-    String storeName;   
-    String location;    
-    String contact;     
+    int store_id;
+    String name;
+    String Location;
+    String Contact;
 
-    // This function displays all store details
-    // No parameters, returns nothing
+    // Prints all store details
     void displayStore() {
-        System.out.println("Store ID : " + storeId);
-        System.out.println("Name     : " + storeName);
-        System.out.println("Location : " + location);
-        System.out.println("Contact  : " + contact);
+        System.out.println("Store ID : " + store_id);
+        System.out.println("Name     : " + name);
+        System.out.println("Location : " + Location);
+        System.out.println("Contact  : " + Contact);
     }
 }

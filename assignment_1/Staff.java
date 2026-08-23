@@ -1,52 +1,44 @@
-// This is the Staff class - stores info about employees working in the store
+// This class is for employees working in the store.
+// They have salary and joining date along with basic info.
 public class Staff {
-    int uid;            
-    int sId;            
-    String name;       
-    String phone;      
-    String email;      
-    String address;     
-    String joiningDate; 
-    double salary;     
+    int uid;
+    int s_id;
+    String User_name;
+    String contact;
+    String email;
+    String address;
+    String joining_date;
+    double salary;
 
-    // This function displays all staff details
-    // No parameters, returns nothing
+    // Prints all staff details
     void displayStaff() {
-        System.out.println("Staff ID     : " + sId);
+        System.out.println("Staff ID     : " + s_id);
         System.out.println("User ID      : " + uid);
-        System.out.println("Name         : " + name);
-        System.out.println("Phone        : " + phone);
+        System.out.println("Name         : " + User_name);
+        System.out.println("Contact      : " + contact);
         System.out.println("Email        : " + email);
         System.out.println("Address      : " + address);
-        System.out.println("Joining Date : " + joiningDate);
+        System.out.println("Joining Date : " + joining_date);
         System.out.println("Salary       : Rs." + salary);
     }
 
-    // This function shows that staff sold a product
-    // Parameter: p (a Product object) - tells which product was sold
-    // Returns nothing
-    void sellProduct(Product p) {
-        System.out.println(name + " sold " + p.productName);
+    // Shows that staff sold a product
+    void SellProduct() {
+        System.out.println(User_name + " sold a product.");
     }
 
-    // This function shows that staff repaired a product
-    // Parameter: p (a Product object) - tells which product was repaired
-    // Returns nothing
-    void repairProduct(Product p) {
-        System.out.println(name + " repaired " + p.productName);
+    // Shows that staff repaired a product
+    void RepairProduct() {
+        System.out.println(User_name + " repaired a product.");
     }
 
-    // This function shows that staff marketed a product
-    // Parameter: p (a Product object) - tells which product was marketed
-    // Returns nothing
-    void marketProduct(Product p) {
-        System.out.println(name + " marketed " + p.productName);
+    // Shows that staff provided a service
+    void Giveservice() {
+        System.out.println(User_name + " provided a service.");
     }
 
-    // This function shows that staff provided a service
-    // Parameter: s (a Service object) - tells which service was provided
-    // Returns nothing
-    void provideService(Service s) {
-        System.out.println(name + " provided " + s.serviceType + " service");
+    // Shows that staff marketed a product
+    void MarketProduct() {
+        System.out.println(User_name + " marketed a product.");
     }
 }

@@ -1,18 +1,18 @@
-// This is the User class - it stores basic info about any person using the system
+// This class stores basic info that every person in the system has.
+// Customer, Supplier, Staff, Owner, Investor all use these same fields.
 public class User {
-    // These are the attributes (data) that every user has
-    int uid;         
-    String userName;   
-    String contact;    
-    int age;          
-    String email;     
-    String address;   
+    int uid;
+    String User_name;
+    String contact;
+    int age;
+    String email;
+    String address;
 
-    // This function displays all the user details on the screen
-    // It does NOT take any parameters and does NOT return anything (void)
+    // Shows all the basic user details on screen
+    // No parameters needed, nothing returned
     void displayUser() {
         System.out.println("User ID : " + uid);
-        System.out.println("Name    : " + userName);
+        System.out.println("Name    : " + User_name);
         System.out.println("Contact : " + contact);
         System.out.println("Age     : " + age);
         System.out.println("Email   : " + email);

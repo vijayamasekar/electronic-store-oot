@@ -1,12 +1,12 @@
 /*
-
+ * 
  * Author         : Vijaya Masekar
  * Roll Number    : 2657
  * Subject        : Object Oriented Technology
  * Topic          : Abstraction
  * Description    : User is abstract. Customer and Staff MUST
  *                  implement their own display() method.
-
+ * 
  */
 
 // ABSTRACT CLASS - Cannot create objects of User directly!
@@ -57,6 +57,32 @@ class Staff extends User {
 
 public class Abstraction {
     public static void main(String[] args) {
-        System.out.println("========== ABSTRACTION DEMO ==========\n");
+        System.out.println(" ABSTRACTION  \n");
         System.out.println("User is abstract - you cannot create User objects.");
-        System.out.println("Only specific types like Customer or Staff can exist
+        System.out.println("Only specific types like Customer or Staff can exist.\n");
+
+        // This would give ERROR:
+        // User u = new User();
+
+        // These work fine
+        Customer c = new Customer();
+        c.uid = 2;
+        c.User_name = "Vijaya";
+        c.contact = "9876543210";
+        c.cid = 101;
+        c.total_purchase = 75000;
+
+        Staff s = new Staff();
+        s.uid = 5;
+        s.User_name = "Rahul";
+        s.contact = "6666666666";
+        s.s_id = 501;
+        s.salary = 25000;
+
+        // Each calls its OWN version of display()
+        c.display();
+        s.display();
+
+        
+    }
+}

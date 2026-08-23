@@ -59,7 +59,7 @@ class Owner extends User {
 
 public class Polymorphism {
     public static void main(String[] args) {
-        System.out.println("========== POLYMORPHISM DEMO ==========\n");
+        System.out.println(" POLYMORPHISM  \n");
         System.out.println("Same method display(), different output!\n");
 
         // Creating objects
@@ -92,6 +92,6 @@ public class Polymorphism {
             users[i].display();  // Same call, different results!
         }
 
-        System.out.println("\n========== DEMO END ==========");
+   
     }
 }

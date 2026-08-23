@@ -1,15 +1,12 @@
 /*
-
- * Author         : Vijaya Masekar
- * Roll Number    : 2657
- * Subject        : Object Oriented Technology
- * Topic          : Inheritance
- * Description    : Customer and Staff inherit fields and methods
- *                  from User parent class.
-
+ Author         : Vijaya Masekar
+ Roll Number    : 2657
+ Subject        : Object Oriented Technology
+ Topic          : Inheritance
+ Description    : Customer and Staff classes inherits from User class
  */
 
-// PARENT CLASS - User
+// Parent class - has common stuff
 class User {
     int uid;
     String User_name;
@@ -18,7 +15,6 @@ class User {
     String email;
     String address;
 
-    // Shared method for all users
     void displayUserInfo() {
         System.out.println("User ID : " + uid);
         System.out.println("Name    : " + User_name);
@@ -29,14 +25,14 @@ class User {
     }
 }
 
-// CHILD CLASS - Customer IS A User
+// Child class - gets everything from User plus its own stuff
 class Customer extends User {
     int cid;
     double total_purchase;
 
     void displayCustomer() {
         System.out.println("\n--- CUSTOMER ---");
-        displayUserInfo();  // Reusing parent's method!
+        displayUserInfo();  // using parent's method
         System.out.println("Customer ID    : " + cid);
         System.out.println("Total Purchase : Rs." + total_purchase);
     }
@@ -44,13 +40,9 @@ class Customer extends User {
     void PurchaseProduct() {
         System.out.println(User_name + " purchased a product.");
     }
-
-    void ReturnProduct() {
-        System.out.println(User_name + " returned a product.");
-    }
 }
 
-// CHILD CLASS - Staff IS A User
+// Another child class
 class Staff extends User {
     int s_id;
     String joining_date;
@@ -58,7 +50,7 @@ class Staff extends User {
 
     void displayStaff() {
         System.out.println("\n--- STAFF ---");
-        displayUserInfo();  // Reusing parent's method!
+        displayUserInfo();
         System.out.println("Staff ID     : " + s_id);
         System.out.println("Joining Date : " + joining_date);
         System.out.println("Salary       : Rs." + salary);
@@ -71,33 +63,29 @@ class Staff extends User {
 
 public class Inheritance {
     public static void main(String[] args) {
-        System.out.println("========== INHERITANCE DEMO ==========\n");
-        System.out.println("Customer and Staff get User's fields automatically.\n");
+        System.out.println(" INHERITANCE  \n");
 
-        // Creating Customer
         Customer c = new Customer();
-        c.uid = 2;              // From parent User
-        c.User_name = "Vijaya"; // From parent User
+        c.uid = 2;
+        c.User_name = "Vijaya";
         c.contact = "9876543210";
         c.age = 25;
         c.email = "vijaya@gmail.com";
         c.address = "Goa";
-        c.cid = 101;            // Customer's own field
+        c.cid = 101;
         c.total_purchase = 75000;
 
-        // Creating Staff
         Staff s = new Staff();
-        s.uid = 5;              // From parent User
-        s.User_name = "Rahul";  // From parent User
+        s.uid = 5;
+        s.User_name = "Rahul";
         s.contact = "6666666666";
         s.age = 28;
         s.email = "rahul@store.com";
         s.address = "Goa";
-        s.s_id = 501;           // Staff's own field
+        s.s_id = 501;
         s.joining_date = "01-01-2024";
         s.salary = 25000;
 
-        // Display
         c.displayCustomer();
         c.PurchaseProduct();
 
@@ -106,6 +94,6 @@ public class Inheritance {
         s.displayStaff();
         s.SellProduct();
 
-        System.out.println("\n========== DEMO END ==========");
+
     }
 }
