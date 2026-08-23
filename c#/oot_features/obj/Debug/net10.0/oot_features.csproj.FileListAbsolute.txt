@@ -1,0 +1,5 @@
+C:\Users\vijay\OneDrive\Desktop\Vijaya\mca\oot\github\electronic-store-oot\c#\oot_features\obj\Debug\net10.0\oot_features.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vijay\OneDrive\Desktop\Vijaya\mca\oot\github\electronic-store-oot\c#\oot_features\obj\Debug\net10.0\oot_features.AssemblyInfoInputs.cache
+C:\Users\vijay\OneDrive\Desktop\Vijaya\mca\oot\github\electronic-store-oot\c#\oot_features\obj\Debug\net10.0\oot_features.AssemblyInfo.cs
+C:\Users\vijay\OneDrive\Desktop\Vijaya\mca\oot\github\electronic-store-oot\c#\oot_features\obj\Debug\net10.0\oot_features.csproj.CoreCompileInputs.cache
+C:\Users\vijay\OneDrive\Desktop\Vijaya\mca\oot\github\electronic-store-oot\c#\oot_features\obj\Debug\net10.0\oot_features.sourcelink.json
