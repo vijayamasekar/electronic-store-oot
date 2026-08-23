@@ -1,127 +1,131 @@
 /*
 
-Author         : Vijaya Masekar
-Roll Number    : 2657
-Subject        : Object Oriented Technology
-Topic          : Encapsulation
-Description    : Demonstrating Encapsulation by keeping fields
-                 private and accessing them through public
-                 getters and setters with validation.
+ * Author         : Vijaya Masekar
+ * Roll Number    : 2657
+ * Subject        : Object Oriented Technology
+ * Topic          : Encapsulation
+ * Description    : Product class with private fields accessed
+ *                  through public getters and setters.
 
  */
 
-class Product{
-    private int productId;
-    private String productName;
-    private String brand;
-    private double price;
+class Product {
+    // PRIVATE fields - cannot be accessed directly from outside
+    private int p_id;
+    private String product_name;
+    private double Price;
+    private String Category;
+    private String Warranty;
     private int stock;
 
-
-    public int getProductId()
-    {
-        return productId;
+    // GETTER for p_id
+    // No parameters, returns int
+    public int getP_id() {
+        return p_id;
     }
 
-
-    public String getProductName()
-    {
-        return productName;
+    // SETTER for p_id with validation
+    // Parameter: id (int), returns nothing
+    public void setP_id(int id) {
+        if (id > 0) {
+            p_id = id;
+        } else {
+            System.out.println("Product ID must be greater than 0.");
+        }
     }
 
-
-    public String getBrand()
-    {
-        return brand;
+    // GETTER for product_name
+    public String getProduct_name() {
+        return product_name;
     }
 
-
-    public double getPrice()
-    {
-        return price;
+    // SETTER for product_name
+    public void setProduct_name(String name) {
+        product_name = name;
     }
 
+    // GETTER for Price
+    public double getPrice() {
+        return Price;
+    }
 
-    public int getStock()
-    {
+    // SETTER for Price with validation
+    public void setPrice(double price) {
+        if (price > 0) {
+            Price = price;
+        } else {
+            System.out.println("Price cannot be negative.");
+        }
+    }
+
+    // GETTER for Category
+    public String getCategory() {
+        return Category;
+    }
+
+    // SETTER for Category
+    public void setCategory(String category) {
+        Category = category;
+    }
+
+    // GETTER for Warranty
+    public String getWarranty() {
+        return Warranty;
+    }
+
+    // SETTER for Warranty
+    public void setWarranty(String warranty) {
+        Warranty = warranty;
+    }
+
+    // GETTER for stock
+    public int getStock() {
         return stock;
     }
 
-
-    public void setProductId(int id)
-    {
-        if(id>0)
-        {
-            productId=id;
-        }
-        else{
-            System.out.println("Product id must be greater than 0.");
+    // SETTER for stock with validation
+    public void setStock(int product_stock) {
+        if (product_stock >= 0) {
+            stock = product_stock;
+        } else {
+            System.out.println("Stock cannot be negative.");
         }
     }
 
-
-    public void setProductName(String name)
-    {
-        productName=name;
-    }
-
-
-    public void setBrand(String brandname)
-    {
-        brand=brandname;
-    }
-
-
-    public void setPrice(Double productprice)
-    {
-        if(productprice>0)
-        {
-            price=productprice;
-        }
-        else
-        {
-            System.out.println("Price cannot be negative");
-        }
-    }
-
-
-    public void setStock(int productstock)
-    {
-        if(productstock>0)
-        {
-            stock=productstock;
-        }
-        else{
-            System.out.println("stock cannot be negative");
-        }
-    }
-    public void display()
-    {
+    // Display all product details
+    // No parameters, returns nothing
+    public void display() {
         System.out.println("PRODUCT DETAILS");
         System.out.println("---------------");
-        System.out.println("Product Id : "+productId);
-        System.out.println("Product Name : "+productName);
-        System.out.println("Product Brand :"+brand);
-        System.out.println("Product Price : Rs."+price);
-        System.out.println("Product Stock : "+stock);
+        System.out.println("Product ID    : " + p_id);
+        System.out.println("Product Name  : " + product_name);
+        System.out.println("Price         : Rs." + Price);
+        System.out.println("Category      : " + Category);
+        System.out.println("Warranty      : " + Warranty);
+        System.out.println("Stock         : " + stock);
     }
-
-
 }
 
-
 public class Encapsulation {
-
-
     public static void main(String[] args) {
-        Product laptop=new Product();
-        laptop.setProductId(1);
-        laptop.setProductName("Laptop");
-        laptop.setBrand("HP");
-        laptop.setPrice(75000.00);
-        laptop.setStock(10);
-        laptop.display();
-        laptop.setPrice(-50000.00);
+        System.out.println("========== ENCAPSULATION DEMO ==========\n");
+
+        // Creating object and setting values through setters only
+        Product p = new Product();
+        p.setP_id(1001);
+        p.setProduct_name("Headphones");
+        p.setPrice(5000);
+        p.setCategory("Audio");
+        p.setWarranty("1 year");
+        p.setStock(50);
+
+        // Display using getter logic inside display()
+        p.display();
+
+        // Trying invalid value to show validation works
+        System.out.println("\n--- Trying invalid price ---");
+        p.setPrice(-1000);
+
+        System.out.println("\n========== DEMO END ==========");
     }
-   
 }

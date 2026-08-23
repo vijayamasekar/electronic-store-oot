@@ -1,115 +1,111 @@
 /*
-  Author         : Vijaya Masekar
-  Roll Number    : 2657
-  Subject        : Object Oriented Technology
-  Topic          : Inheritance
-  Description    : Demonstrating Inheritance using User as parent
-                    and Customer & Staff as child classes.
- 
+
+ * Author         : Vijaya Masekar
+ * Roll Number    : 2657
+ * Subject        : Object Oriented Technology
+ * Topic          : Inheritance
+ * Description    : Customer and Staff inherit fields and methods
+ *                  from User parent class.
+
  */
 
-// PARENT CLASS - This is the base class that holds common info
-// Any class can "extend" this to reuse its fields and methods
+// PARENT CLASS - User
 class User {
-    int uid;        // User ID - common for everyone
-    String name;    // Name - common for everyone
-    String contact; // Phone - common for everyone
-    String email;   // Email - common for everyone
+    int uid;
+    String User_name;
+    String contact;
+    int age;
+    String email;
+    String address;
 
-    // This function displays basic user info
-    // No parameters, returns nothing
+    // Shared method for all users
     void displayUserInfo() {
         System.out.println("User ID : " + uid);
-        System.out.println("Name    : " + name);
+        System.out.println("Name    : " + User_name);
         System.out.println("Contact : " + contact);
+        System.out.println("Age     : " + age);
         System.out.println("Email   : " + email);
+        System.out.println("Address : " + address);
     }
 }
 
-// CHILD CLASS - Customer INHERITS from User
-// "extends" means: Customer gets everything User has, plus its own stuff
+// CHILD CLASS - Customer IS A User
 class Customer extends User {
-    int cid;                // Customer's own ID
-    double totalPurchase;   // Customer's own field
+    int cid;
+    double total_purchase;
 
-    // This function displays customer-specific details
-    // No parameters, returns nothing
     void displayCustomer() {
-        System.out.println("\n--- CUSTOMER DETAILS ---");
+        System.out.println("\n--- CUSTOMER ---");
         displayUserInfo();  // Reusing parent's method!
         System.out.println("Customer ID    : " + cid);
-        System.out.println("Total Purchase : Rs." + totalPurchase);
+        System.out.println("Total Purchase : Rs." + total_purchase);
     }
 
-    // Customer buys a product
-    // Parameter: productName (String) - name of product being purchased
-    // Returns nothing
-    void purchase(String productName) {
-        System.out.println(name + " purchased " + productName);
+    void PurchaseProduct() {
+        System.out.println(User_name + " purchased a product.");
+    }
+
+    void ReturnProduct() {
+        System.out.println(User_name + " returned a product.");
     }
 }
 
-// CHILD CLASS - Staff INHERITS from User
+// CHILD CLASS - Staff IS A User
 class Staff extends User {
-    int sId;            // Staff's own ID
-    String jobRole;     // Staff's own field
-    double salary;      // Staff's own field
+    int s_id;
+    String joining_date;
+    double salary;
 
-    // Displays staff-specific details
-    // No parameters, returns nothing
     void displayStaff() {
-        System.out.println("\n--- STAFF DETAILS ---");
+        System.out.println("\n--- STAFF ---");
         displayUserInfo();  // Reusing parent's method!
-        System.out.println("Staff ID : " + sId);
-        System.out.println("Job Role : " + jobRole);
-        System.out.println("Salary   : Rs." + salary);
+        System.out.println("Staff ID     : " + s_id);
+        System.out.println("Joining Date : " + joining_date);
+        System.out.println("Salary       : Rs." + salary);
     }
 
-    // Staff sells a product
-    // Parameter: productName (String) - name of product sold
-    // Returns nothing
-    void sell(String productName) {
-        System.out.println(name + " sold " + productName);
+    void SellProduct() {
+        System.out.println(User_name + " sold a product.");
     }
 }
 
-// MAIN CLASS - To test Inheritance
 public class Inheritance {
     public static void main(String[] args) {
         System.out.println("========== INHERITANCE DEMO ==========\n");
-        System.out.println("Inheritance means: Child classes get");
-        System.out.println("fields & methods from Parent class.\n");
+        System.out.println("Customer and Staff get User's fields automatically.\n");
 
-        // Creating Customer object
-        // Customer automatically gets uid, name, contact, email from User!
+        // Creating Customer
         Customer c = new Customer();
-        c.uid = 1;           // From parent User
-        c.name = "Vijaya";   // From parent User
-        c.contact = "9876543210"; // From parent User
-        c.email = "vijaya@gmail.com"; // From parent User
-        c.cid = 101;         // Customer's own field
-        c.totalPurchase = 75000; // Customer's own field
+        c.uid = 2;              // From parent User
+        c.User_name = "Vijaya"; // From parent User
+        c.contact = "9876543210";
+        c.age = 25;
+        c.email = "vijaya@gmail.com";
+        c.address = "Goa";
+        c.cid = 101;            // Customer's own field
+        c.total_purchase = 75000;
 
-        // Creating Staff object
-        // Staff also gets uid, name, contact, email from User!
+        // Creating Staff
         Staff s = new Staff();
-        s.uid = 2;           // From parent User
-        s.name = "Rahul";    // From parent User
-        s.contact = "9999999999"; // From parent User
-        s.email = "rahul@store.com"; // From parent User
-        s.sId = 501;         // Staff's own field
-        s.jobRole = "Sales Executive"; // Staff's own field
-        s.salary = 25000;    // Staff's own field
+        s.uid = 5;              // From parent User
+        s.User_name = "Rahul";  // From parent User
+        s.contact = "6666666666";
+        s.age = 28;
+        s.email = "rahul@store.com";
+        s.address = "Goa";
+        s.s_id = 501;           // Staff's own field
+        s.joining_date = "01-01-2024";
+        s.salary = 25000;
 
-        // Call methods
+        // Display
         c.displayCustomer();
-        c.purchase("Laptop");
+        c.PurchaseProduct();
 
-        System.out.println(); // Empty line for spacing
+        System.out.println();
 
         s.displayStaff();
-        s.sell("Mobile");
+        s.SellProduct();
 
-        System.out.println("\n========== INHERITANCE DEMO END ==========");
+        System.out.println("\n========== DEMO END ==========");
     }
 }

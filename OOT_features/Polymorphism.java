@@ -1,5 +1,4 @@
 /*
- * ============================================================
   Author         : Vijaya Masekar
   Roll Number    : 2657
   Subject        : Object Oriented Technology
@@ -7,105 +6,92 @@
   Description    : Demonstrating Polymorphism where the same
                     method name display() behaves differently
                     for different objects (User types).
-
  */
 
-// PARENT CLASS
 class User {
-    String name;
+    String User_name;
     String role;
 
-    // This method will be OVERRIDDEN by children
-    // No parameters, returns nothing
+    // Parent version - will be overridden
     void display() {
-        System.out.println("Generic User: " + name);
+        System.out.println("Generic User: " + User_name);
     }
 }
 
-// CHILD CLASS 1 - Overrides display()
 class Customer extends User {
-    double totalPurchase;
+    double total_purchase;
 
-    // OVERRIDING - Same method name, different behavior!
-    // No parameters, returns nothing
+    // OVERRIDING - Same name, different behavior!
     @Override
     void display() {
         System.out.println("\n--- CUSTOMER ---");
-        System.out.println("Name           : " + name);
+        System.out.println("Name           : " + User_name);
         System.out.println("Role           : " + role);
-        System.out.println("Total Purchase : Rs." + totalPurchase);
+        System.out.println("Total Purchase : Rs." + total_purchase);
     }
 }
 
-// CHILD CLASS 2 - Overrides display()
 class Staff extends User {
     double salary;
 
-    // OVERRIDING - Same method name, different behavior!
-    // No parameters, returns nothing
+    // OVERRIDING - Same name, different behavior!
     @Override
     void display() {
         System.out.println("\n--- STAFF ---");
-        System.out.println("Name   : " + name);
+        System.out.println("Name   : " + User_name);
         System.out.println("Role   : " + role);
         System.out.println("Salary : Rs." + salary);
     }
 }
 
-// CHILD CLASS 3 - Overrides display()
 class Owner extends User {
-    int storesOwned;
+    int o_id;
 
-    // OVERRIDING - Same method name, different behavior!
-    // No parameters, returns nothing
+    // OVERRIDING - Same name, different behavior!
     @Override
     void display() {
         System.out.println("\n--- OWNER ---");
-        System.out.println("Name        : " + name);
-        System.out.println("Role        : " + role);
-        System.out.println("Stores Owned: " + storesOwned);
+        System.out.println("Name    : " + User_name);
+        System.out.println("Role    : " + role);
+        System.out.println("Owner ID: " + o_id);
     }
 }
 
-// MAIN CLASS - To test Polymorphism
 public class Polymorphism {
     public static void main(String[] args) {
         System.out.println("========== POLYMORPHISM DEMO ==========\n");
-        System.out.println("Polymorphism means: Same method name,");
-        System.out.println("different behavior for different objects.\n");
+        System.out.println("Same method display(), different output!\n");
 
         // Creating objects
         Customer c = new Customer();
-        c.name = "Vijaya";
+        c.User_name = "Vijaya";
         c.role = "Customer";
-        c.totalPurchase = 75000;
+        c.total_purchase = 75000;
 
         Staff s = new Staff();
-        s.name = "Rahul";
+        s.User_name = "Rahul";
         s.role = "Sales Executive";
         s.salary = 25000;
 
         Owner o = new Owner();
-        o.name = "Mr. Sharma";
+        o.User_name = "Mr. Sharma";
         o.role = "Owner";
-        o.storesOwned = 3;
+        o.o_id = 401;
 
         // POLYMORPHISM IN ACTION!
-        // We store different child objects in a Parent array
+        // Parent array holding different child objects
         User[] users = new User[3];
-        users[0] = c;  // Customer object in User reference
-        users[1] = s;  // Staff object in User reference
-        users[2] = o;  // Owner object in User reference
+        users[0] = c;  // Customer object
+        users[1] = s;  // Staff object
+        users[2] = o;  // Owner object
 
-        System.out.println("Calling display() on each object:");
-        System.out.println("Same method name, but different output!\n");
+        System.out.println("Looping through array and calling display():");
+        System.out.println("Java automatically picks the CORRECT version!\n");
 
-        // Loop through array and call display()
-        // Java automatically picks the CORRECT version based on the actual object!
         for (int i = 0; i < users.length; i++) {
-            users[i].display();  // Polymorphism happens here!
+            users[i].display();  // Same call, different results!
         }
 
-        System.out.println("\n========== POLYMORPHISM DEMO END ==========");
+        System.out.println("\n========== DEMO END ==========");
     }
 }

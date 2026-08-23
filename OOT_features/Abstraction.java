@@ -1,102 +1,62 @@
 /*
 
-  Author         : Vijaya Masekar
-  Roll Number    : 2657
-  Subject        : Object Oriented Technology
-  Topic          : Abstraction
-  Description    : Demonstrating Abstraction using Product as
-                   abstract parent. You cannot create generic
-                   Product objects - only specific ones like
-                   Laptop or Mobile.
+ * Author         : Vijaya Masekar
+ * Roll Number    : 2657
+ * Subject        : Object Oriented Technology
+ * Topic          : Abstraction
+ * Description    : User is abstract. Customer and Staff MUST
+ *                  implement their own display() method.
 
  */
 
-// ABSTRACT CLASS - You CANNOT create objects of this class directly!
-// "abstract" keyword hides the complexity and forces children to implement details.
-abstract class Product {
-    int pId;
-    String productName;
-    String brand;
-    double price;
+// ABSTRACT CLASS - Cannot create objects of User directly!
+abstract class User {
+    int uid;
+    String User_name;
+    String contact;
 
-    // Concrete method - shared by all children
-    // No parameters, returns nothing
-    void displayBasicInfo() {
-        System.out.println("Product ID   : " + pId);
-        System.out.println("Product Name : " + productName);
-        System.out.println("Brand        : " + brand);
-        System.out.println("Price        : Rs." + price);
+    // Concrete method - shared by all
+    void displayUserInfo() {
+        System.out.println("User ID : " + uid);
+        System.out.println("Name    : " + User_name);
+        System.out.println("Contact : " + contact);
     }
 
-    // ABSTRACT METHOD - No body! Every child MUST write their own version.
-    // This hides the implementation details from the parent.
-    // No parameters, returns nothing
-    abstract void displayDetails();
+    // ABSTRACT METHOD - No body! Children MUST write their own.
+    abstract void display();
 }
 
-// CONCRETE CLASS - Laptop provides the body for abstract method
-class Laptop extends Product {
-    String processor;
-    int ram;
+// CONCRETE CLASS - Must implement display()
+class Customer extends User {
+    int cid;
+    double total_purchase;
 
-    // Implementing the abstract method - Laptop's own version
-    // No parameters, returns nothing
+    // Forced to implement this because parent is abstract
     @Override
-    void displayDetails() {
-        System.out.println("\n--- LAPTOP DETAILS ---");
-        displayBasicInfo();  // Reusing parent's concrete method
-        System.out.println("Processor : " + processor);
-        System.out.println("RAM       : " + ram + " GB");
+    void display() {
+        System.out.println("\n--- CUSTOMER ---");
+        displayUserInfo();
+        System.out.println("Customer ID    : " + cid);
+        System.out.println("Total Purchase : Rs." + total_purchase);
     }
 }
 
-// CONCRETE CLASS - Mobile provides the body for abstract method
-class Mobile extends Product {
-    int batteryCapacity;
+// CONCRETE CLASS - Must implement display()
+class Staff extends User {
+    int s_id;
+    double salary;
 
-    // Implementing the abstract method - Mobile's own version
-    // No parameters, returns nothing
     @Override
-    void displayDetails() {
-        System.out.println("\n--- MOBILE DETAILS ---");
-        displayBasicInfo();  // Reusing parent's concrete method
-        System.out.println("Battery : " + batteryCapacity + " mAh");
+    void display() {
+        System.out.println("\n--- STAFF ---");
+        displayUserInfo();
+        System.out.println("Staff ID : " + s_id);
+        System.out.println("Salary   : Rs." + salary);
     }
 }
 
-// MAIN CLASS - To test Abstraction
 public class Abstraction {
     public static void main(String[] args) {
         System.out.println("========== ABSTRACTION DEMO ==========\n");
-        System.out.println("Abstraction means: Hiding complex details");
-        System.out.println("and showing only essential features.");
-        System.out.println("You CANNOT create objects of abstract class!\n");
-
-        // This would give ERROR:
-        // Product p = new Product(); 
-        // Because Product is abstract!
-
-        // Creating Laptop object - this is allowed
-        Laptop laptop = new Laptop();
-        laptop.pId = 1001;
-        laptop.productName = "Inspiron 15";
-        laptop.brand = "Dell";
-        laptop.price = 65000;
-        laptop.processor = "Intel i5";
-        laptop.ram = 16;
-
-        // Creating Mobile object - this is allowed
-        Mobile mobile = new Mobile();
-        mobile.pId = 1002;
-        mobile.productName = "Galaxy S24";
-        mobile.brand = "Samsung";
-        mobile.price = 80000;
-        mobile.batteryCapacity = 5000;
-
-        // Call the abstract method - each object knows its own version!
-        laptop.displayDetails();
-        mobile.displayDetails();
-
-        System.out.println("\n========== ABSTRACTION DEMO END ==========");
-    }
-}
+        System.out.println("User is abstract - you cannot create User objects.");
+        System.out.println("Only specific types like Customer or Staff can exist
