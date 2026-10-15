@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vijay\\OneDrive\\Desktop\\Vijaya\\mca\\oot\\github\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj": {}
+    "C:\\Users\\vijay\\OneDrive\\Documents\\Vijaya_GitHub\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vijay\\OneDrive\\Desktop\\Vijaya\\mca\\oot\\github\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj": {
+    "C:\\Users\\vijay\\OneDrive\\Documents\\Vijaya_GitHub\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vijay\\OneDrive\\Desktop\\Vijaya\\mca\\oot\\github\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj",
+        "projectUniqueName": "C:\\Users\\vijay\\OneDrive\\Documents\\Vijaya_GitHub\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj",
         "projectName": "oot_features",
-        "projectPath": "C:\\Users\\vijay\\OneDrive\\Desktop\\Vijaya\\mca\\oot\\github\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj",
+        "projectPath": "C:\\Users\\vijay\\OneDrive\\Documents\\Vijaya_GitHub\\electronic-store-oot\\c#\\oot_features\\oot_features.csproj",
         "packagesPath": "C:\\Users\\vijay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vijay\\OneDrive\\Desktop\\Vijaya\\mca\\oot\\github\\electronic-store-oot\\c#\\oot_features\\obj\\",
+        "outputPath": "C:\\Users\\vijay\\OneDrive\\Documents\\Vijaya_GitHub\\electronic-store-oot\\c#\\oot_features\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vijay\\AppData\\Roaming\\NuGet\\NuGet.Config"
